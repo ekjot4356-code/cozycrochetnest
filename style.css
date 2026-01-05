@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #FFF7F2;
+  color: #4A3F3A;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display';
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #4A3F3A;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px;
+}
+
+.btn {
+  background: #E7A6B1;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.products {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.product img {
+  width: 200px;
+  border-radius: 10px;
+}
