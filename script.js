@@ -52,15 +52,30 @@ function placeOrder() {
     return;
   }
 
-  let message = "Hello! I want to order:\n";
-  let total = 0;
+  let name = document.getElementById("custName").value.trim();
+  let phone = document.getElementById("custPhone").value.trim();
+  let address = document.getElementById("custAddress").value.trim();
+  let payment = document.querySelector('input[name="payment"]:checked').value;
 
+  if (!name || !phone || !address) {
+    alert("Please fill all details");
+    return;
+  }
+
+  let message = "🧶 *New Order - Cozy Crochet Nest* 🧶\n\n";
+  message += `Name: ${name}\n`;
+  message += `Phone: ${phone}\n`;
+  message += `Address: ${address}\n\n`;
+  message += "Order Items:\n";
+
+  let total = 0;
   cart.forEach(item => {
     message += `• ${item.name} x${item.qty} = ₹${item.price * item.qty}\n`;
     total += item.price * item.qty;
   });
 
-  message += `\nTotal: ₹${total}`;
+  message += `\nTotal: ₹${total}\n`;
+  message += `Payment Method: ${payment}`;
 
   let url = "https://wa.me/917889267007?text=" + encodeURIComponent(message);
   window.open(url, "_blank");
