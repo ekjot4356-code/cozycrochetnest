@@ -125,4 +125,4 @@ setTimeout(() => {
 
 }
 
-document.addEventListener("DOMContentLoaded", loadCart);
+document.addEventListener("DOMContentLoaded", updateCartCount);
