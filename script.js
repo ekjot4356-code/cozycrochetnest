@@ -2,8 +2,8 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 /* ---------------- ADD TO CART ---------------- */
-function addToCart(name, price, qty = 1) {
-  qty = parseInt(qty);
+function addToCart(name, price, qty) {
+  qty = qty ? parseInt(qty) : 1;
 
   const existing = cart.find(item => item.name === name);
 
