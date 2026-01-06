@@ -245,4 +245,13 @@ body {
     font-size: 2.8rem;
   }
 }
+/* FORCE LOGO VISIBILITY FIX */
+.hero img {
+  display: block !important;
+  width: 260px !important;
+  height: auto !important;
+  opacity: 1 !important;
+  margin: 0 auto 20px;
+  position: static !important;
+}
 
