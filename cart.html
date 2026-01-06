@@ -30,9 +30,15 @@
   </label>
 
   <label>
-    <input type="radio" name="payment" value="UPI">
-    UPI
-  </label>
+  <input type="radio" name="payment" value="COD" checked onchange="toggleUPI()">
+  Cash on Delivery (COD)
+</label>
+
+<label>
+  <input type="radio" name="payment" value="UPI" onchange="toggleUPI()">
+  UPI
+</label>
+
   <div id="upiBox" style="display:none; margin-top:10px;">
   <p><strong>UPI ID:</strong> yourupi@bank</p>
   <p>Please pay after confirming on WhatsApp.</p>
