@@ -36,6 +36,7 @@ function loadCart() {
     list.appendChild(li);
     total += item.price * item.qty;
   });
+   updateCartCount();
 
   let totalLi = document.createElement("li");
   totalLi.style.fontWeight = "bold";
