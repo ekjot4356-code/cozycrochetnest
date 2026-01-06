@@ -25,7 +25,10 @@ function loadCart() {
   cart.forEach((item, index) => {
     let li = document.createElement("li");
     li.innerHTML = `
-      ${item.name} (x${item.qty}) - ₹${item.price * item.qty}
+      <strong>${item.name}</strong><br>
+      ₹${item.price} × ${item.qty} = ₹${item.price * item.qty}<br>
+      <button onclick="changeQty(${index}, -1)">➖</button>
+      <button onclick="changeQty(${index}, 1)">➕</button>
       <button onclick="removeItem(${index})">❌</button>
     `;
     list.appendChild(li);
@@ -36,6 +39,16 @@ function loadCart() {
   totalLi.style.fontWeight = "bold";
   totalLi.textContent = `Total: ₹${total}`;
   list.appendChild(totalLi);
+}
+function changeQty(index, change) {
+  cart[index].qty += change;
+
+  if (cart[index].qty <= 0) {
+    cart.splice(index, 1);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
 }
 
 // REMOVE ITEM
