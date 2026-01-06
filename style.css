@@ -195,4 +195,19 @@ body {
   color: #333;
   font-weight: 600;
 }
+.cart-btn {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 0.7rem;
+  padding: 3px 7px;
+  border-radius: 50%;
+  font-weight: bold;
+}
 
