@@ -245,13 +245,25 @@ body {
     font-size: 2.8rem;
   }
 }
-/* FORCE LOGO VISIBILITY FIX */
+/* BIG HERO LOGO STYLE */
+.hero {
+  min-height: 100vh;
+  padding-top: 40px;
+  text-align: center;
+}
+
 .hero img {
-  display: block !important;
-  width: 260px !important;
-  height: auto !important;
-  opacity: 1 !important;
-  margin: 0 auto 20px;
-  position: static !important;
+  width: 340px;
+  max-width: 90%;
+  margin: -30px auto 10px;
+  display: block;
+}
+
+/* MOBILE EXTRA LARGE LOGO */
+@media (max-width: 768px) {
+  .hero img {
+    width: 380px;
+    margin-top: -50px;
+  }
 }
 
